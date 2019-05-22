@@ -9,8 +9,10 @@ class Dog
   end
   
   def self.all
-    @@all.map do |name|
-      puts name.instance_variable_get(:@name)
+    @@all.map do |dog_instance| 
+      #binding.pry
+      #dog_instance => <Dog #3459039458 name: "Sally">
+      puts dog_instance.name
     end
   end
   
